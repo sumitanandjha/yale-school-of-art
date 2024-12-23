@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yale School of Art</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul {
+            list-style: none;
+        }
+        
+        /* Header Styles */
+        header {
+            background: #002D62;
+            color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+        nav ul li a:hover {
+            color: #FFD700;
+        }
+        
+        /* Hero Section */
+        /* Enhanced Hero Section */
+.hero {
+    position: relative;
+    height: 600px;
+    background: linear-gradient(to right, rgba(2, 117, 216, 0.8), rgba(0, 45, 98, 0.8)), 
+        url('https://c1.wallpaperflare.com/preview/968/730/441/building-cheyenne-photos-high-school.jpg') center/cover no-repeat;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.hero .btn {
+    background: linear-gradient(to right, #FFD700, #FF8C00);
+    color: #002D62;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.hero .btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #FFB700, #FF4500);
+}
+
+        
+        /* About Section */
+        /* About Section */
+.about {
+    padding: 3rem;
+    background: linear-gradient(135deg, #f0f8ff, #f7c6d7); /* Soft gradient background */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+}
+
+.about h2:hover {
+    color: #ff7f50; /* Vibrant coral color on hover */
+}
+
+.about p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 0 1rem;
+}
+
+.about p:hover {
+    color: #333; /* Darker text color on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.about .quote {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #777;
+    text-align: center;
+    margin-top: 2rem;
+    transition: color 0.3s ease;
+}
+
+.about .quote:hover {
+    color: #ff7f50; /* Vibrant coral color on hover */
+}
+
+/* Add background illustration */
+.about::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://example.com/path/to/your/illustration.png'); /* Example background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+/* Animation for text */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about h2, .about p {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+        /* Programs Section */
+        .programs {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f0f8ff; /* Light blue background for the section */
+    border-radius: 8px;
+}
+
+.programs h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.programs .cards {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition: transform 0.3s;
+}
+
+.program-card {
+    background: linear-gradient(145deg, #f5f7fa, #c3cfe2); /* Soft gradient background */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #c3cfe2, #f5f7fa); /* Hover background change */
+}
+
+.program-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.program-card:hover h3 {
+    color: #ff7f50; /* Vibrant coral color on hover */
+}
+
+.program-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.program-card:hover p {
+    color: #333; /* Darker text color on hover for better readability */
+}
+
+.program-card .button {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #ff7f50; /* Coral background */
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.program-card .button:hover {
+    background-color: #ff6347; /* Lighter coral on hover */
+}
+
+.program-card .button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 127, 80, 0.8); /* Focus effect for accessibility */
+}
+
+/* Animation for cards as they come into view */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.program-card {
+    animation: slideIn 0.5s ease-out forwards;
+}
+
+
+
+        /* Gallery Section */
+        .gallery {
+            padding: 2rem;
+        }
+        .gallery h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+        }
+        .gallery .images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Contact Section */
+        /* Contact Section */
+.contact {
+    padding: 3rem;
+    background: linear-gradient(135deg, #f4f4f4, #e0e7ff); /* Soft gradient background */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.contact h2:hover {
+    color: #ff7f50; /* Vibrant coral on hover */
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: #ff7f50; /* Coral border on focus */
+    box-shadow: 0 0 8px rgba(255, 127, 80, 0.5);
+}
+
+.contact form button {
+    background: #002D62;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.contact form button:hover {
+    background: #0053A6;
+    transform: translateY(-5px); /* Slight hover lift */
+}
+
+.contact form button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 83, 166, 0.7); /* Focus effect */
+}
+
+/* Admissions Section */
+.admissions {
+    padding: 3rem;
+    background: linear-gradient(135deg, #eaeaea, #d0ebff); /* Light gradient background */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.admissions h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.admissions h2:hover {
+    color: #ff7f50; /* Vibrant coral on hover */
+}
+
+.admissions form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.admissions form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.admissions form input,
+.admissions form select,
+.admissions form button {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.admissions form input:focus,
+.admissions form select:focus {
+    border-color: #ff7f50;
+    box-shadow: 0 0 8px rgba(255, 127, 80, 0.5);
+}
+
+.admissions form button {
+    background: #002D62;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.admissions form button:hover {
+    background: #0053A6;
+    transform: translateY(-5px); /* Slight hover lift */
+}
+
+.admissions form button:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 83, 166, 0.7); /* Focus effect */
+}
+
+/* Footer */
+/* Footer Container */
+footer {
+    background: linear-gradient(135deg, #002D62, #0053A6); /* Gradient background */
+    color: #fff;
+    padding: 3rem 5rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease; /* Smooth color transition on hover */
+}
+
+footer:hover {
+    background: #003b76; /* Darker gradient on hover */
+}
+
+/* Footer Content */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: scale(1.1); /* Logo zoom effect */
+}
+
+/* Footer Links */
+.footer-links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+.footer-links ul li {
+    display: inline-block;
+}
+
+.footer-links ul li a {
+    color: #FFD700; /* Gold color for links */
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Footer Social Icons */
+.footer-social ul {
+    list-style-type: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-social ul li a {
+    color: #FFD700;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-social ul li a:hover {
+    color: #fff;
+    transform: scale(1.2); /* Icons scale on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: #aaa;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-bottom p a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer-bottom p a:hover {
+    text-decoration: underline;
+}
+
+/* Animation for smooth load-in effects */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contact, .admissions, footer {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Yale School of Art</div>
+    <nav>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Yale School of Art</h1>
+        <p>Inspiring creativity and craftsmanship in every artist.</p>
+        <div class="hero-buttons">
+            <button class="btn">Learn More</button>
+            <button class="btn">Join Us</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="programs" class="programs">
+    <h2>Our Programs</h2>
+    <div class="cards">
+        <div class="program-card">
+            <h3>Visual Arts</h3>
+            <p>Explore your creativity through painting, drawing, and digital art.</p>
+        </div>
+        <div class="program-card">
+            <h3>Sculpture</h3>
+            <p>Shape your imagination into reality with our sculpture program.</p>
+        </div>
+        <div class="program-card">
+            <h3>Graphic Design</h3>
+            <p>Learn to communicate ideas visually with innovative design skills.</p>
+        </div>
+    </div>
+</section>
+
+<section id="admissions" class="admissions">
+    <h2>Admissions</h2>
+    <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="program">Program of Interest:</label>
+        <select id="program" name="program">
+            <option value="visual-arts">Visual Arts</option>
+            <option value="sculpture">Sculpture</option>
+            <option value="graphic-design">Graphic Design</option>
+        </select>
+
+        <button type="submit">Submit Application</button>
+    </form>
+</section>
+
+<section id="gallery" class="gallery">
+    <h2>Gallery</h2>
+    <div class="images">
+        <img src="download (1).jpg" alt="Art 1">
+        <img src="download (2).jpg" alt="Art 2">
+        <img src="download (3).jpg" alt="Art 3">
+        <img src="download.jpg" alt="Art 4">
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+<section id="about" class="about">
+    <h2>About Us</h2>
+    <p>**About Us - Yale School of Art**
+
+        The Yale School of Art is one of the most prestigious art schools in the world, offering an environment that fosters the creative, intellectual, and professional growth of artists. With a long and rich history dating back to its founding in 1869, the School of Art has been a place where innovation, imagination, and rigorous study come together to inspire the next generation of artists, designers, and educators. At Yale, we strive to offer an interdisciplinary and collaborative environment, equipping our students with the skills, knowledge, and support they need to succeed as contemporary artists and to make meaningful contributions to the art world.
+        
+        ### History and Legacy
+        
+        The Yale School of Art was established with a vision to provide a comprehensive and forward-thinking education to artists at a time when the role of art in society was undergoing dramatic transformations. Since its founding, the School has been at the forefront of shaping artistic education and discourse. Through decades of change, the institution has continuously sought to expand the boundaries of creative expression while maintaining a commitment to high standards of craftsmanship and intellectual rigor.
+        
+        Over the years, Yale has produced countless influential artists, curators, and critics who have gone on to define the landscape of contemporary art. The legacy of the Yale School of Art is felt globally, with alumni contributing to all areas of the arts, from painting, sculpture, and photography to graphic design, printmaking, and film.
+        
+        ### Vision and Philosophy
+        
+        At the Yale School of Art, we believe that the process of making art is as important as the art itself. Our students are encouraged to think critically about the world around them and to engage with the social, cultural, and political dimensions of their work. We provide a space where students can explore ideas in a wide range of media, including painting, sculpture, photography, printmaking, graphic design, and digital arts. Our programs focus on developing each student’s individual voice while also encouraging interdisciplinary exploration and dialogue.
+        
+        Our philosophy is rooted in the belief that art plays a critical role in shaping society and culture. As such, we aim to foster a community that embraces diversity, experimentation, and collaboration. We are committed to creating an inclusive environment where all artists feel welcome and valued, regardless of background, experience, or creative direction.
+        
+        ### Programs and Degrees
+        
+        The Yale School of Art offers several degree programs designed to provide students with the tools to push the boundaries of their artistic practice while developing the conceptual and technical skills needed to succeed in the professional world. These programs include:
+        
+        - **Master of Fine Arts (MFA)**: The MFA program at Yale is a rigorous and immersive two-year course of study. It provides students with a strong foundation in both studio practice and intellectual inquiry, allowing them to engage with art history, theory, and contemporary issues. The program is highly individualized, giving students the freedom to develop their artistic practice while also exposing them to diverse perspectives and ideas through a variety of seminars, critiques, and collaborations.
+        
+        - **Master of Arts (MA) in Art History**: Yale’s MA program in Art History allows students to engage deeply with the study of visual culture, offering a comprehensive understanding of the history of art and its relation to broader historical, social, and political contexts. This program prepares students for careers in museums, galleries, and academia, with an emphasis on research, writing, and critical analysis.
+        
+        - **PhD in Art History**: The PhD program at Yale is designed for students who wish to pursue advanced study and research in art history. Students in this program work closely with faculty to develop specialized knowledge in a chosen area of art history while also engaging in teaching, publications, and other scholarly activities. Yale’s PhD program is one of the most respected in the world, with graduates going on to influential careers in academia and the arts.
+        
+        - **Postgraduate Studies**: The School also offers various postgraduate opportunities, including residencies, fellowships, and collaborative projects that allow artists and scholars to deepen their practice, conduct research, and engage with the Yale community.
+        
+        ### Faculty and Mentorship
+        
+        At the heart of the Yale School of Art is its world-class faculty, made up of accomplished artists, curators, scholars, and critics who bring a wealth of expertise, experience, and passion to their teaching. Our faculty members are leading figures in the contemporary art world, and they play a vital role in shaping the academic and artistic development of our students.
+        
+        The faculty at Yale is committed to providing personalized mentorship, helping each student navigate their artistic journey and push the boundaries of their work. Whether through one-on-one critiques, studio visits, or informal conversations, our faculty offer valuable insights and guidance to support students as they explore new ideas, techniques, and artistic directions.
+        
+        ### Facilities and Resources
+        
+        The Yale School of Art is equipped with state-of-the-art facilities designed to support a wide range of artistic practices. Our studios are spacious, well-lit, and designed to encourage creativity and experimentation. We offer specialized spaces for painting, sculpture, printmaking, photography, graphic design, and digital media, allowing students to explore and refine their craft in an environment that is both inspiring and practical.
+        
+        In addition to the studios, the School has access to extensive resources that enrich the student experience. These include Yale’s libraries, archives, and museums, as well as a range of exhibitions, public programs, and performances that allow students to interact with renowned artists and scholars. Our close proximity to New York City, a global hub for the arts, provides students with unparalleled access to galleries, exhibitions, and cultural events, enriching their educational experience and opening up numerous professional opportunities.
+        
+        ### Community and Collaboration
+        
+        At Yale, we believe that the exchange of ideas and collaboration are essential components of artistic development. Our students are part of a vibrant, interdisciplinary community where artists, designers, scholars, and critics come together to share their work, discuss ideas, and engage with the wider world of contemporary art. We encourage collaboration not only within the School of Art but also with other departments at Yale, fostering connections with students and faculty in fields such as architecture, drama, music, and more.
+        
+        Our community extends beyond the classroom and studio. We host regular events, including lectures, workshops, and artist talks, where students have the opportunity to learn from and interact with leading figures in the art world. These events create a dynamic exchange of ideas that challenges students to think critically and expansively about their practice.
+        
+        ### Alumni and Careers
+        
+        Yale School of Art alumni have gone on to achieve remarkable success in a variety of fields within the arts, including painting, sculpture, photography, graphic design, and more. Our alumni include influential artists, curators, museum directors, and educators who continue to shape the direction of contemporary art.
+        
+        The School of Art’s commitment to providing a comprehensive education—both intellectually and professionally—means that our graduates are well-prepared for a wide range of careers in the arts and beyond. Whether pursuing a career as an artist, educator, curator, or in other creative industries, our alumni benefit from Yale’s extensive network of professionals and its strong reputation in the art world.
+        
+        ### Conclusion
+        
+        The Yale School of Art is committed to providing a transformative educational experience that equips students to be leaders in the arts. With a rich history, exceptional faculty, state-of-the-art facilities, and a vibrant community of artists and scholars, Yale offers a unique environment where creativity and critical thinking thrive. Our mission is to inspire students to push the boundaries of their practice, engage deeply with the world around them, and contribute meaningfully to the ongoing evolution of art and culture.</p>
+</section>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-logo">
+            
+        </div>
+        <div class="footer-links">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-social">
+            <ul>
+                <li><a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" class="social-icon"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="#" class="social-icon"><i class="fab fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </div>
+</footer>
+
+    
